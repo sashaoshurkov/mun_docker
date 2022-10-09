@@ -20,7 +20,7 @@ docker run --rm --name mun_init --network host -v $HOME/.mun:/root/.mun sashaosh
 
 # Fetch genesis.json from genesis node
 ```bash
-curl --tlsv1 https://node1.mun.money/genesis? | jq ".result.genesis" > ~/.mun/config/genesis.json
+curl --tlsv1 https://node1.mun.money/genesis? | jq ".result.genesis" > $HOME/.mun/config/genesis.json
 ```
 
 # Update seed in config.toml to make p2p connection
