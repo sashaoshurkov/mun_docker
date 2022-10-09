@@ -1,7 +1,7 @@
 FROM golang:1.18 AS builder
 
 RUN apt-get update; \
-    apt-get install -y build-essential git jq
+    apt-get install -y build-essential git
 
 RUN git clone https://github.com/munblockchain/mun.git; \
     cd mun; \
