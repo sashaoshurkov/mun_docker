@@ -8,7 +8,8 @@ RUN git clone https://github.com/munblockchain/mun.git; \
     cd mun; \
     git checkout main; \
     make install; \
-    make clean
+    make clean; \
+    cd .. && rm -rf mun
 
 FROM ubuntu:20.04
 
