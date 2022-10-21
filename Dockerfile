@@ -18,6 +18,6 @@ WORKDIR /root
 COPY --from=builder /go/bin/mund /usr/bin
 COPY --from=builder /go/pkg/mod/github.com/!cosm!wasm/wasmvm@v1.0.0/api/libwasmvm.x86_64.so /usr/lib
 
-EXPOSE 26656 26657 6060 26658 26660 9090 9091
+EXPOSE 1317 6060 9090 9091 26656 26657 26658 26660
 
 CMD ["/usr/bin/mund", "start", "--pruning=nothing", "--rpc.laddr=tcp://0.0.0.0:26657"]
