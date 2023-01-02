@@ -43,7 +43,7 @@ docker exec -it mun_node mund status
 # After buying TMUN, stake it to become a validator
 ```bash
 tendermint=$(docker exec -it mun_node mund tendermint show-validator); \
-docker exec -it mun_node mund tx staking create-validator --from [wallet_name] --moniker [moniker_name] --pubkey $(echo $tendermint) --chain-id testmun --keyring-backend test --amount 50000000000utmun --commission-max-change-rate 0.01 --commission-max-rate 0.2 --commission-rate 0.1 --min-self-delegation 1 --fees 200000utmun --gas auto --gas=auto --gas-adjustment=1.5 -y
+docker exec -it mun_node mund tx staking create-validator --from [wallet_name] --moniker [moniker_name] --pubkey $tendermint --chain-id testmun --keyring-backend test --amount 50000000000utmun --commission-max-change-rate 0.01 --commission-max-rate 0.2 --commission-rate 0.1 --min-self-delegation 1 --fees 200000utmun --gas auto --gas=auto --gas-adjustment=1.5 -y
 ```
 # Get out of jail
 ```bash
